@@ -95,4 +95,5 @@ int botonApretado(void)
 }
 ```
 ![Segunda parte del proyecto](https://github.com/AlvaGabriell/proyectoSPD/blob/main/Imagenes%20Proyectos/1er%20proyecto.png?raw=true)
-[Proyecto 1era parte](https://www.tinkercad.com/things/gAemcLuC6ex-parte-1-proyecto-gabriel-alva/editel?sharecode=HLoxwAN4L0HkfC0XOirH4gJgcmiTHVmwimBpfrpmqdE)
+
+[Proyecto 1era parte](https://www.tinkercad.com/things/3h7caC1fXgx-copy-of-copy-of-copy-of-copy-of-tremendous-bombul-bruticus/editel?sharecode=ePjGwDPxoj7QeDdOtZlXsQdHHba6zLB88qycONYH1Sw)
