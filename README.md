@@ -7,4 +7,42 @@ Desarrollar un contador en arduino que muestre una determinada serie de numeros 
 
 [Proyecto 1era parte](https://www.tinkercad.com/things/gAemcLuC6ex-parte-1-proyecto-gabriel-alva/editel?sharecode=HLoxwAN4L0HkfC0XOirH4gJgcmiTHVmwimBpfrpmqdE)
 
+Codigo: 
+prendedigito recibe el display a prender.
+alterna los estados para que los display trabajen individualmente
+pero mantengan la multiplexacion 
+```cpp
+void prendeDigito(int digito)
+{
+  if(digito== UNIDAD)
+  {
+  	digitalWrite(UNIDAD,LOW);
+    digitalWrite(DECENA,HIGH);
+    delay(TIMEDISPLAYON);
+  }
+  else if (digito == DECENA)
+  {
+  	digitalWrite(UNIDAD,HIGH);
+    digitalWrite(DECENA,LOW);
+    delay(TIMEDISPLAYON);
+  }
+  else
+  {
+  	digitalWrite(UNIDAD,HIGH);
+    digitalWrite(DECENA,HIGH);
+  }
+mostrar cantidad recibe la cantidad,
+enciende los leds y hace la operacion para obtener la decena y luego mostrarla 
+con la funcion prendeDigito.
+vuelve a encender los leds y luego hace otro calculo para obtener la unidad y tambien mostrarla.
+void mostrarCantidad(int count)
+{
+  prendeDigito(APAGADOS);
+  mostrarDigito(count/10);
+  prendeDigito(DECENA);
+  prendeDigito(APAGADOS);
+  mostrarDigito(count -10*((int)count/10));
+  prendeDigito(UNIDAD);
+}
 
+}
