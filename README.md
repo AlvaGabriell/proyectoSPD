@@ -7,11 +7,15 @@ Primera parte del parcial
 [Proyecto 1era parte](https://www.tinkercad.com/things/gAemcLuC6ex-parte-1-proyecto-gabriel-alva/editel?sharecode=HLoxwAN4L0HkfC0XOirH4gJgcmiTHVmwimBpfrpmqdE)
 
 Desarrollar un contador en arduino que muestre una determinada serie de numeros en 2 displays de 7 segmentos conectados mediante multiplexacion.
-```cpp
-Codigo: 
+```
+
+Codigo:
+
+```
 prendedigito recibe el display a prender.
 alterna los estados para que los display trabajen individualmente
 pero mantengan la multiplexacion 
+```
 void prendeDigito(int digito)
 {
   if(digito== UNIDAD)
@@ -31,12 +35,12 @@ void prendeDigito(int digito)
   	digitalWrite(UNIDAD,HIGH);
     digitalWrite(DECENA,HIGH);
   }
-
-
+```
 mostrar cantidad recibe la cantidad,
 enciende los leds y hace la operacion para obtener la decena y luego mostrarla 
 con la funcion prendeDigito.
 vuelve a encender los leds y luego hace otro calculo para obtener la unidad y tambien mostrarla.
+```
 void mostrarCantidad(int count)
 {
   prendeDigito(APAGADOS);
@@ -48,11 +52,12 @@ void mostrarCantidad(int count)
 }
 
 }
-
+```
 botonApretado 
 toma los valores de los 3 pulsadores 
 y controla que una presionada sea considerada como tal
 aun manteniendo presionado el boton. 
+```
 int botonApretado(void)
 {
 	sube=digitalRead(SUBE);
@@ -88,6 +93,6 @@ int botonApretado(void)
   }
   return 0;
 }
-
-
-
+```
+![Segunda parte del proyecto](https://github.com/AlvaGabriell/proyectoSPD/blob/main/Imagenes%20Proyectos/1er%20proyecto.png?raw=true)
+[Proyecto 1era parte](https://www.tinkercad.com/things/gAemcLuC6ex-parte-1-proyecto-gabriel-alva/editel?sharecode=HLoxwAN4L0HkfC0XOirH4gJgcmiTHVmwimBpfrpmqdE)
