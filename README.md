@@ -31,6 +31,8 @@ void prendeDigito(int digito)
   	digitalWrite(UNIDAD,HIGH);
     digitalWrite(DECENA,HIGH);
   }
+
+
 mostrar cantidad recibe la cantidad,
 enciende los leds y hace la operacion para obtener la decena y luego mostrarla 
 con la funcion prendeDigito.
@@ -86,7 +88,6 @@ int botonApretado(void)
   }
   return 0;
 }
-
 
 
 
