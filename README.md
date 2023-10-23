@@ -46,3 +46,47 @@ void mostrarCantidad(int count)
 }
 
 }
+
+botonApretado 
+toma los valores de los 3 pulsadores 
+y controla que una presionada sea considerada como tal
+aun manteniendo presionado el boton. 
+int botonApretado(void)
+{
+	sube=digitalRead(SUBE);
+  	baja=digitalRead(BAJA);
+ 	reset=digitalRead(RESET);
+  	if(sube)
+ 	subePrevia=1;
+  Serial.println(sube);
+ 
+    if(baja)
+ 	bajaPrevia=1;
+  
+  	if(reset)
+ 	resetPrevia=1;
+
+  
+  if(sube==0 && sube != subePrevia)
+  {
+  	subePrevia=sube;
+    return SUBE;
+  }
+  
+    if(baja==0 && baja != bajaPrevia)
+  {
+  	bajaPrevia=baja;
+    return BAJA;
+  }
+  
+  	if(reset==0 && reset != resetPrevia)
+  {
+  	resetPrevia=reset;
+    return RESET;
+  }
+  return 0;
+}
+
+
+
+
